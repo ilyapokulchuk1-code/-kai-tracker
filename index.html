@@ -25,6 +25,10 @@
 
 - { box-sizing: border-box; margin: 0; padding: 0; }
 
+html {
+background: #0c0c0e !important;
+}
+
 body {
 background: var(–bg);
 color: var(–white);
@@ -36,17 +40,19 @@ line-height: 1.6;
 
 /* HEADER */
 .header {
-padding: 40px 40px 0;
+padding: 20px 16px 16px;
 display: flex;
 justify-content: space-between;
 align-items: flex-end;
 border-bottom: 1px solid var(–border);
-padding-bottom: 28px;
+padding-bottom: 16px;
+flex-wrap: wrap;
+gap: 10px;
 }
 
 .logo {
 font-family: ‘Bebas Neue’, sans-serif;
-font-size: 48px;
+font-size: clamp(28px, 6vw, 48px);
 letter-spacing: 4px;
 color: var(–gold);
 text-shadow: 0 0 40px rgba(212,168,67,0.3);
@@ -83,25 +89,47 @@ letter-spacing: 2px;
 /* NAV TABS */
 .nav {
 display: flex;
-gap: 4px;
-padding: 24px 40px 0;
+gap: 2px;
+padding: 12px 8px 0;
 border-bottom: 1px solid var(–border);
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
 }
 
 .nav-tab {
-padding: 10px 22px 12px;
-font-size: 12px;
-letter-spacing: 2px;
-text-transform: uppercase;
-color: var(–muted);
-cursor: pointer;
-border-bottom: 2px solid transparent;
-transition: all 0.2s;
-font-weight: 500;
-background: none;
-border-top: none;
-border-left: none;
-border-right: none;
+padding: 8px 12px 10px;
+font-size: 11px;
+letter-spacing: 1px;
+white-space: nowrap;
+}
+
+.main {
+padding: 20px 16px 60px;
+}
+
+.week-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.highlights-grid {
+grid-template-columns: 1fr;
+}
+
+.kpi-grid {
+grid-template-columns: 1fr;
+}
+
+.bio-variants {
+grid-template-columns: 1fr;
+}
+
+.cta-list {
+grid-template-columns: 1fr;
+}
+
+.formula-row {
+flex-direction: column;
+align-items: flex-start;
 }
 
 .nav-tab:hover { color: var(–white); }
